@@ -20,6 +20,12 @@ const preMovie = async () => {
     }, 1000);
   });
 
+  const getColdDrinks = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("sprite");
+    }, 1000);
+  });
+
   let ticket = await promiseWifeBringTicks;
 
   console.log(`wife: i have the ${ticket}`);
@@ -38,6 +44,10 @@ const preMovie = async () => {
   console.log("husband: anything else");
   console.log("wife: lets got we are getting late");
   console.log("husband: thank you for the remainder");
+
+  let coolDring = await getColdDrinks;
+
+  console.log(`husband: I got cold dring ${coolDring}`);
   return ticket;
 };
 
